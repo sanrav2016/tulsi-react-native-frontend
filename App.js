@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View
+      style={{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#cccccc"
+      }}
+    >
+      <View
+        style={{
+          width: "100%",
+          height: "95%",
+          position: "absolute",
+          bottom: 0
+        }}
+      >
+        <WebView
+          source={{ uri: 'https://34ac-69-113-81-186.ngrok-free.app' }}
+        />
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
